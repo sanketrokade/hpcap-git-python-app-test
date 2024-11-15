@@ -19,6 +19,6 @@ jobs:
         USER: ${{ secrets.USER }}
         PASS: ${{ secrets.PASS }}
       run: |
-        docker build . --file Dockerfile --tag sanket399/flask-calci:$(date +%s)
+        docker build . --file Dockerfile --tag sanket399/flask-calci:tagname
         docker login -u $USER -p $PASS
         docker push sanket399/flask-calci:tagname
